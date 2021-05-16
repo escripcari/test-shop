@@ -72,7 +72,7 @@ class BasketController extends Controller
         }
 
         $order = Order::find($orderId);
-        
+
         return view('order', compact('order'));
     }
 
