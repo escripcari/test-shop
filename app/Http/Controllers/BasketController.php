@@ -6,6 +6,8 @@ use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\mailController;
+use Illuminate\Support\Facades\Mail;
+
 
 class BasketController extends Controller
 {
@@ -27,23 +29,31 @@ class BasketController extends Controller
     {
 
         $orderId = session('orderId');
-        $prod=Product::find($orderId);
-        dd($prod);
+        $eOrder=session('orderId');
+
+
         if (is_null($orderId)) {
 
             return redirect()->route('index');
         }
         $order = Order::find($orderId);
-        dd($order);
-        $success = $order->saveOrder($request->name, $request->phone, $request->email);
+        $order->status=0;
+        $success = $order->saveOrder($request->name, $request->phone);
 
 
 
         if ($success == true){
 
             session()->flash('success', 'Ваш заказ принят в оброботку');
-            $email = new mailController();
-            $email->sendEmail($order, $request);
+
+            $eprod=Order::findOrFail($eOrder);
+
+            $msg=[
+                "name" => $request->input('name'),
+                "phone" => $request->input('phone'),
+            ];
+            $mail=new mailController();
+            $mail->sendEmail($order, $msg);
         }else{
             session()->flash('warning', 'Случилась ошибка');
         }

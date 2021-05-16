@@ -9,15 +9,9 @@ use PHPUnit\Util\Test;
 
 class mailController extends Controller
 {
-    public $name_product;
-    public $count;
-    public $price;
 
-    public function sendEmail($product, $request)
+    public function sendEmail($product, $msg)
     {
-        $this->name_product = $product['name'];
-        $this->count = $product['count'];
-        $this->price = $product['price'];
 
         $details = [
             'title' => 'Это письмо с моего сайта',
@@ -28,9 +22,8 @@ class mailController extends Controller
                     'price' => $product['price']
                 ],
                 'custom_info' =>[
-                    $request['name'],
-                    $request['email'],
-                    $request['phone']
+                    "name"=>$msg['name'],
+                    "phone"=>$msg['phone']
                 ]
             ],
         ];

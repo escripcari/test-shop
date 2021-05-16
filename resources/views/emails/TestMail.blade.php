@@ -8,13 +8,10 @@
     <title>TestMail</title>
 </head>
 <body>
-    {{dd($details)}}
         <h1>{{$details['title']}}</h1>
-        @foreach($details['body']['prod'] as $prod)
-        <h2>Здраствуйте</h2>
-        <p>{{$prod['name_product']}}</p>
-            <p>{{$prod['count']}}</p>
-            <p>{{$prod['price']}}</p>
-        @endforeach
+
+        <h2>Здраствуйте!</h2>
+        <p>{{$details['body']['custom_info']['name']}}</p>
+        <p>{{$details['body']['custom_info']['phone']}}</p>
 </body>
 </html>

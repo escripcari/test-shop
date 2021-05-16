@@ -5,6 +5,7 @@
     <h1></h1>
     <p></p>
     <div class="panel">
+
         <table class="table table-striped">
             <thead>
             <tr>
