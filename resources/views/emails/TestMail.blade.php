@@ -11,6 +11,8 @@
         <h1>{{$details['title']}}</h1>
 
         <h2>Здраствуйте!</h2>
+        <h3>Я зделал заказ на вашем сайте</h3>
+        <p>Вот мои данные:</p>
         <p>{{$details['body']['custom_info']['name']}}</p>
         <p>{{$details['body']['custom_info']['phone']}}</p>
 </body>
