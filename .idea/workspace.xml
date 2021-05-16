@@ -10,7 +10,13 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18bfd630-cfa3-4416-a531-6a3c600d1d82" name="Default Changelist" comment="" />
@@ -31,6 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <branch-grouping />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -216,7 +223,7 @@
       <workItem from="1620740162600" duration="5223000" />
       <workItem from="1620754546779" duration="576000" />
       <workItem from="1621104127499" duration="5926000" />
-      <workItem from="1621150803946" duration="965000" />
+      <workItem from="1621150803946" duration="2155000" />
     </task>
     <servers />
   </component>
@@ -228,7 +235,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

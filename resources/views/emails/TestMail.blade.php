@@ -13,7 +13,15 @@
         <h2>Здраствуйте!</h2>
         <h3>Я зделал заказ на вашем сайте</h3>
         <p>Вот мои данные:</p>
-        <p>{{$details['body']['custom_info']['name']}}</p>
-        <p>{{$details['body']['custom_info']['phone']}}</p>
+        <ul>
+            <li>
+                <p>{{$details['body']['custom_info']['name']}}</p>
+            </li>
+            <li>
+                <p>{{$details['body']['custom_info']['phone']}}</p>
+            </li>
+        </ul>
+
+
 </body>
 </html>
